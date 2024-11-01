@@ -1,0 +1,404 @@
+/* 
+ * Reset 
+ */
+#quickshop div, #quickshop h1, #quickshop h2, #quickshop p #quickshop em, #quickshop strong, #quickshop ul, #quickshop li, #quickshop form,
+#quickshop label, #quickshop table,#quickshop tbody, #quickshop tfoot, #quickshop thead, #quickshop tr, #quickshop th, #quickshop td {
+	margin:0;
+	padding:0;
+	border:0;
+}
+#quickshop table {
+	border-collapse:separate;
+	border-spacing:0;
+}
+#quickshop th, #quickshop td {
+	font-weight:normal;
+	text-align:left;
+}
+#quickshop a {
+	color:#090909;
+	text-decoration:none;
+}
+#quickshop a:hover {
+	color:#07B1F0;
+	text-decoration:underline;
+}
+#quickshop input:focus, #quickshop select:focus {
+    outline:none;
+}
+
+
+/* 
+ * Modal Window 
+ */
+#quickshop { /* Modal main container */
+	font:12px/14px Arial, Helvetica, sans-serif;
+	color:#818181;
+}
+
+
+/* 
+ * On-Sale Banner
+ */
+#quickshop span.onsale {
+	position:absolute;
+    top:8px;
+	left:8px;
+    z-index:100;
+	font-size:14px;
+	line-height:14px;
+    font-weight:bold;
+	color:#FF4949;
+	text-transform:uppercase;
+	text-align:left;
+    text-shadow:none;
+	min-width:0;
+	min-height:0;
+    margin:0;
+    padding:0;
+	background:none;
+    border-radius:0;
+    box-shadow:none;
+}
+
+
+/* 
+ * Product Summary
+ */
+#quickshop div.product div.summary h1 { /* Product summary heading */
+	font-size:20px;
+    line-height:20px;
+	font-weight:normal;
+    color:#090909;
+	margin:0;
+	padding:0;
+}
+#quickshop div.product div.product_description p { /* Product description text */
+    font-size:12px;
+	line-height:20px;
+	color:#777;
+	margin-bottom:15px;
+}
+
+
+/* 
+ * Product Price
+ */
+#quickshop div.product .summary .price { /* Price */
+    font-size:20px;
+	color:#07B1F0;
+	margin:15px 0 11px;
+}
+#quickshop div.product .summary .price del .amount { /* Full price */
+	font-size:14px;
+	color:#555;
+}
+#quickshop div.product .summary .price .from { /* Price 'From' text */
+	font-size:13px;
+	color:#888;
+}
+#quickshop div.product .summary .price ins {
+	text-decoration:none;
+	background:none;
+}
+
+
+/* 
+ * Product Star Rating
+ */
+#quickshop div.product div.star-rating,
+#quickshop div.product div.star-rating span {
+	background-image:url("../images/star.png");
+	background-repeat:repeat-x;
+}
+#quickshop div.product div.star-rating { /* Star rating */
+	float:left;
+	display:inline-block;
+	width:85px;
+	height:16px;
+	background-position:left 0;
+}
+#quickshop div.star-rating:before {
+	position:static;
+	float:none;
+    content:"";
+}
+#quickshop div.product div.star-rating span { /* Star rating overlay */
+ 	float:left;
+    height:0;
+    overflow:hidden;
+    padding-top:16px;
+    background-position:left -32px;
+}
+#quickshop div.product div.star-rating span:before {
+    position:static;
+	content:"";
+}
+#quickshop div.product .count { /* Star rating text */
+	font-size:11px;
+	line-height:11px;
+	color:#888;
+	margin-left:5px;
+}
+
+
+/* 
+ * Product Stock
+ */
+#quickshop div.product .stock {
+	color:#818181;
+}
+#quickshop div.product span.stock.out-of-stock { /* Out of stock text */
+	display:block;
+	margin-bottom:15px;
+	padding:15px;
+	border:1px dotted #ccc;
+	text-align:center;
+}
+#quickshop div.product p.stock, /* In stock text */
+#quickshop div.product .stock strong,
+#quickshop div.product small.stock {
+	font-weight:normal;
+	color:#73B334;
+}
+#quickshop div.product .stock strong.out-of-stock, /* Out of stock text */
+#quickshop div.product .group_table .stock.out-of-stock { /* Grouped product out of stock text */
+	color:#ff0000;
+}
+
+
+/*
+ * Product Form
+ */
+#quickshop div.product form.cart { /* Product form */
+	position:relative;
+	display:block;
+	margin:17px 0;
+	padding:15px;
+	overflow:hidden;
+	border:1px solid #ddd;
+	background:#f5f5f5;
+}
+
+
+/*
+ * Product Quantity
+ */
+#quickshop div.product form.cart div.quantity { /* Product quantity container */
+    float:left;
+    position:relative;
+    width:60px;
+	margin:1px 8px 0 0;
+	padding:0;
+}
+#quickshop .quantity input.qty {
+	float:left;
+    font-weight:normal;
+	line-height:28px;
+	text-align:center;
+	width:40px;
+    height:28px;
+    padding:0;
+    border:1px solid #C7C0C7;
+	border-right:0 none;
+    border-radius:2px 0 0 2px;
+    box-shadow:none;
+}
+#quickshop .quantity input[type="number"] {
+	padding-right:17px;
+}
+#quickshop .quantity input[type=number]::-webkit-inner-spin-button,
+#quickshop .quantity input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance:none;
+    margin:0;
+}
+#quickshop .quantity input.plus, 
+#quickshop .quantity input.minus {
+    display:block;
+	position:absolute;
+    font-size:12px;
+	line-height:13px;
+    font-weight:normal;
+	color:#5E5E5E;
+	text-align:center;
+    text-decoration:none;
+    text-shadow:0 1px 0 rgba(255, 255, 255, 0.8);
+	width:20px;
+    height:15px;
+    margin:0;
+	padding:0;
+    overflow:visible;
+    vertical-align:text-top;
+	border:1px solid #C7C0C7;
+    border-radius:2px;
+	background:#f5f5f5;
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#DFDBDF), to(#F7F6F7));
+	background:-webkit-linear-gradient(top, #F7F6F7, #DFDBDF);
+	background:-moz-linear-gradient(top, #F7F6F7, #DFDBDF);
+	background:-ms-linear-gradient(top, #F7F6F7, #DFDBDF);
+	background:-o-linear-gradient(top, #F7F6F7, #DFDBDF);
+	background:linear-gradient(top, #F7F6F7, #DFDBDF);
+    box-shadow:none;
+	cursor:pointer;
+}
+#quickshop .quantity input.plus {
+	top:0;
+	right:0;
+    border-bottom:0 none;
+    border-bottom-left-radius:0;
+    border-bottom-right-radius:0;
+}
+#quickshop .quantity input.minus {
+	right:0;
+	bottom:0;
+    border-top-left-radius:0;
+    border-top-right-radius:0;
+}
+
+
+/* 
+ * Product Meta (categories and tags)
+ */
+#quickshop div.product .product_meta { /* Product meta wrapper */
+	font-size:12px;
+}
+#quickshop div.product .product_meta .meta { /* Product meta containers */
+	margin-top:10px;
+	overflow:hidden;
+	color:#333;
+}
+#quickshop div.product .product_meta .meta a {
+	color:#777;
+}
+#quickshop div.product .product_meta .meta a:hover {
+	color:#07B1F0;
+}
+#quickshop div.product .product_meta span { /* Product meta span */
+	display:inline-block;
+}
+#quickshop div.product .product_meta .sku { /* SKU value */
+	color:#777;
+}
+
+
+/*
+ * Product Table
+ */
+#quickshop div.product form.cart table { /* Product table */
+}
+#quickshop div.product form.cart table tr { /* Product table row */
+}
+#quickshop div.product form.cart table td { /* Product table cell */
+	padding-bottom:7px;
+	vertical-align:middle;
+}
+#quickshop div.product form.cart table td.label {
+	padding-right:8px;
+}
+
+
+/* 
+ * Variable Product
+ */
+#quickshop .variations label { /* Variation form label */
+	display:block;
+	width:40px;
+	font-weight:normal;
+	color:#323232;
+}
+#quickshop .variations td.value { /* Variation select table cell */
+	width:100%;
+}
+#quickshop .variations select { /* Variation form select */
+	font-size:13px;
+	color:#555;
+	width:98%;
+	padding:3px 5px 3px 2px;
+	border:1px solid #ccc;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+#quickshop .reset_variations { /* Clear selection link */
+	display:none;
+	float:right;
+}
+#quickshop .single_variation_wrap { /* Variation price container */
+	float:left;
+	clear:both;
+	width:100%;
+	margin-top:10px;
+}
+#quickshop div.product .single_variation .price del .amount { /* Variation full price */
+	font-size:16px;
+}
+#quickshop .single_variation .stock { /* Variation stock */
+	font-size:11px;
+	margin-top:5px;
+}
+#quickshop .variations_button { /* Variation button wrapper */
+	position:relative;
+	width:100%;
+	margin-top:13px;
+    overflow:hidden;
+}
+
+
+/* 
+ * Grouped Products
+ */
+#quickshop div.product .group_table .price { /* Grouped price */
+	font-size:12px;
+}
+#quickshop div.product form.cart .group_table td { /* Grouped table cell */
+    vertical-align:top;
+}
+#quickshop div.product form.cart table small.stock { /* Grouped stock */
+    display:block;
+    float:none;
+}
+#quickshop div.product .qs_product_type_grouped { /* Grouped button */
+	float:left;
+	margin-top:8px;
+}
+
+
+/* 
+ * External Products
+ */
+#quickshop div.product p.cart { /* External button wrapper */
+	display:inline-block;
+	float:none;
+	margin:2px 0 17px;
+}
+#quickshop div.product .qs_product_type_external { /* External button */
+	float:left;
+}
+
+
+/* 
+ * Add to Cart Buttons
+ */
+#quickshop .button { /* Buy button */
+    float:right;
+	font:bold 11px/12px Arial, Helvetica, sans-serif;
+	text-transform:uppercase;
+    color:#fff;
+	padding:8px 17px;
+	border:1px solid #474747;	
+	border-radius:3px;
+	background:#222;
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#1a1a1a), to(#434343));
+	background:-webkit-linear-gradient(top, #434343, #1a1a1a);
+	background:-moz-linear-gradient(top, #434343, #1a1a1a);
+	background:-ms-linear-gradient(top, #434343, #1a1a1a);
+	background:-o-linear-gradient(top, #434343, #1a1a1a);
+	background:linear-gradient(top, #434343, #1a1a1a);
+	text-shadow:none;
+	box-shadow:none;
+	cursor:pointer;
+}
+#quickshop .button:hover { /* Buy button hover */
+	color:#fff;
+	text-decoration:none;
+}

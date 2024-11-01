@@ -1,0 +1,217 @@
+/* 
+ * Quickshop Button 
+ */
+a.quickshop_button { /* Quickshop button */
+	display:none;
+	position:absolute;
+	top:50%;
+	left:50%;
+	font:12px/14px Arial, Helvetica, sans-serif;
+	color:#fff;
+	text-decoration:none;
+	margin-top:-45px;
+	margin-left:-53px;
+	padding:6px 24px 8px;
+	border:1px solid #474747;
+	-moz-border-radius:50px;
+	-webkit-border-radius:50px;
+	border-radius:50px;
+	outline:none;
+	background:#222;
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#1a1a1a), to(#434343));
+	background:-webkit-linear-gradient(top, #434343, #1a1a1a);
+	background:-moz-linear-gradient(top, #434343, #1a1a1a);
+	background:-ms-linear-gradient(top, #434343, #1a1a1a);
+	background:-o-linear-gradient(top, #434343, #1a1a1a);
+	background:linear-gradient(top, #434343, #1a1a1a);
+}
+a.quickshop_button:hover, a.quickshop_button:active, a.quickshop_button:focus { /* Quickshop button hover */
+	background:#333;
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#1a1a1a), to(#4c4c4c));
+	background:-webkit-linear-gradient(top, #4c4c4c, #1a1a1a);
+	background:-moz-linear-gradient(top, #4c4c4c, #1a1a1a);
+	background:-ms-linear-gradient(top, #4c4c4c, #1a1a1a);
+	background:-o-linear-gradient(top, #4c4c4c, #1a1a1a);
+	background:linear-gradient(top, #4c4c4c, #1a1a1a);
+}
+.product { /* Product container */
+	position:relative !important;
+}
+.product:hover > a.quickshop_button { /* Product container hover */
+	display:block;
+}
+
+
+/* 
+ * Background Overlay 
+ */
+#quickshop_overlay {
+	display:none;
+	position:fixed;
+    top:0;
+	left:0;
+    width:100%;
+	height:100%;
+    z-index:9999;
+	background:#e9e9e9;
+	opacity:0.7;
+}
+
+
+/* 
+ * Common styles 
+ */
+#quickshop,
+#quickshop_loader {
+	display:none;
+	font-family:Arial, Helvetica, sans-serif;
+	position:absolute;
+	left:50%;
+	z-index:10000;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	background:#fff;
+	border:1px solid #cdcdcd;
+	box-shadow:0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+
+/* 
+ * Modal Loader 
+ */
+#quickshop_loader {
+	top:300px;
+	width:260px;
+	height:141px;
+	margin-left:-130px;
+	text-align:center;
+	background:url("../images/spinner.gif") no-repeat center 39px #fff;
+}
+#quickshop_loader p {
+    display:block;
+	font-size:12px;
+	color:#676767;
+	width:70%;
+	margin:89px auto 0;
+    padding:0;
+}
+
+
+/* 
+ * Modal Window 
+ */
+#quickshop { /* Modal main container */
+	top:100px;
+	width:754px;
+	margin-left:-388px;
+}
+a#quickshop_close { /* Modal close button */
+	display:block;
+	position:absolute;
+	top:15px;
+	right:15px;
+	z-index:10000;
+	width:13px;
+	height:12px;
+	text-indent:-1000em;
+    outline:none;
+	background:url("../images/modal_close.png") no-repeat 0 0 transparent;
+}
+#quickshop .qs_wrapper { /* Product wrapper div */
+	position:relative;
+	float:none !important;
+	padding:32px 24px 32px;
+	overflow:hidden !important;
+}
+
+
+/* 
+ * Product Summary
+ */
+#quickshop div.product div.summary { /* Product summary container */
+    float:left;
+	width:48%;
+	margin-left:3.6%;
+	
+}
+
+
+/* 
+ * Product Image
+ */
+#quickshop div.product div.images { /* Product image container */
+	position:relative;
+	float:left;
+	width:48.1%;
+    margin-bottom:0;
+}
+#quickshop div.product div.images div.image_wrap { /* Product image wrapper */
+	position:relative;
+	border:1px solid #ddd;
+}
+#quickshop div.product div.images a {
+	display:block;
+	outline:none;
+	overflow:hidden;
+}
+#quickshop div.product div.images img { /* Product image */
+	display:block;
+	max-width:100%;
+	margin:0;
+	padding:0;
+	border:0 none;
+	-moz-border-radius:0;
+	-webkit-border-radius:0;
+	border-radius:0;
+	box-shadow:none;
+}
+#quickshop div.full_product_details { /* Full product details box */
+	border:1px solid #ddd;
+	margin-top:-1px;
+	padding:11px 0;
+	text-align:center;
+}
+#quickshop div.full_product_details a {
+	font-weight:bold;
+	color:#07B1F0;
+}
+
+
+/* 
+ * Product Star Rating
+ */
+#quickshop div.product div.qs_rating { /* Star rating container */
+	width:100%;
+	margin-bottom:15px;
+}
+#quickshop div.product div.star-rating { /* Star rating */
+	float:none;
+}
+
+
+/* 
+ * Validation Error
+ */
+#quickshop div.qs_error { /* Modal error message */
+	color:#ff0000;
+	margin-top:-10px;
+	margin-bottom:21px;
+	line-height:19px;
+}
+#quickshop div.qs_error a {
+	float:none;
+	font:normal 12px/12px Arial, Helvetica, sans-serif;
+	text-transform:none;
+    color:#090909;
+	padding:0;
+	border:0 none;	
+	border-radius:0;
+	background:none;
+	text-shadow:none;
+	box-shadow:none;
+}
+#quickshop div.qs_error a:hover {
+	color:#07B1F0;
+	text-decoration:underline;
+}
